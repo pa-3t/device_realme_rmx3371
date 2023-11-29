@@ -217,7 +217,8 @@ PRODUCT_PACKAGES += \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
     OPlusTetheringResCommon \
-    OPlusWifiResCommon
+    OPlusWifiResCommon \
+    OPlusWifiResCommonMainline
 
 # Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
