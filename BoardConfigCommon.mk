@@ -35,6 +35,7 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    recovery \
     odm \
     product \
     system \
@@ -80,6 +81,9 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):init_realme_kona
 TARGET_RECOVERY_DEVICE_MODULES := init_realme_kona
+
+# Touch
+TARGET_POWER_FEATURE_EXT_LIB := //$(COMMON_PATH):libpowerfeature_ext_realme_kona
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -142,6 +146,7 @@ TARGET_BOARD_PLATFORM := kona
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
