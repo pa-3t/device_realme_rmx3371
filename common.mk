@@ -95,7 +95,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 TARGET_USES_FOD_ZPOS := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V1-ndk.vendor
+    android.hardware.graphics.common-V1-ndk.vendor \
+    vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V5-ndk_platform.vendor \
+    vendor.qti.hardware.memtrack-service
 
 # Boot control
 PRODUCT_PACKAGES += \
