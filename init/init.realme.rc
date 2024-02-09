@@ -38,14 +38,37 @@ on init
     write /dev/sys/fs/by-name/userdata/data_io_flag 56
     write /dev/sys/fs/by-name/userdata/node_io_flag 56
 
+on boot
+  # Double Tap Sensor
+    chown system system /proc/touchpanel/i2c/double_tap_pressed
+    chmod 0660 /proc/touchpanel/i2c/double_tap_pressed
+
+    # Single Tap Sensor
+    chown system system /proc/touchpanel/i2c/single_tap_pressed
+    chmod 0660 /proc/touchpanel/i2c/single_tap_pressed
+
+# Route touch_polling_mode to persist
+on property:debug.touch_polling_mode=0
+    setprop persist.vendor.touch_polling_mode 0
+
+on property:debug.touch_polling_mode=1
+    setprop persist.vendor.touch_polling_mode 1
+
+# Toggle glove mode.
+on property:persist.vendor.touch_polling_mode=0 && property:sys.boot_completed=1
+    write /proc/touchpanel/game_switch_enable "0"
+
+on property:persist.vendor.touch_polling_mode=1 && property:sys.boot_completed=1
+    write /proc/touchpanel/game_switch_enable "1"
+
 on property:vendor.post_boot.parsed=1
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
-	
+
     # Runtime fs tuning
     write /dev/sys/fs/by-name/userdata/data_io_flag 8
     write /dev/sys/fs/by-name/userdata/node_io_flag 8
-	
+
     # Runtime fs tuning
     write /sys/block/sda/queue/nr_requests 128
     write /sys/block/sda/queue/iostats 1
@@ -119,11 +142,11 @@ on property:vendor.post_boot.parsed=1
 
     # Setup runtime cpusets
     write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-3,5-6
+    write /dev/cpuset/foreground/cpus 0-3,4-5
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-	write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 1-2
 
     # Setup runtime blkio
     # value for group_idle is us
@@ -172,11 +195,16 @@ on property:vendor.post_boot.parsed=1
 	write /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq 825600
 	write /sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq 3187200
 
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
 on property:vendor.radio.atfwd.start=false
 
-    # Enable suspend to RAM
-    write /sys/power/mem_sleep "deep"
+    # Deep sleep
+    write /sys/power/mem_sleep deep
 
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 6
+    setprop dalvik.vm.dex2oat-threads 6 
