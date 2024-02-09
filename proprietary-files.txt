@@ -159,6 +159,11 @@ vendor/lib64/libOmxMpeghEncSw.so|4832df566b6e9990ab249bb9ea793f97a27052ce
 vendor/lib64/libOmxQcelp13Dec.so|8f504f416b3480d6123111f6fec549fb4a713da0
 vendor/lib64/libOmxWmaDec.so|9735d133cf7043a07cd17dc6a00abdff9641b9a7
 
+# Spatial Audio
+vendor/lib/soundfx/libspatialaudio.so|c84a1098a775401344d97d3c7638498d9207ccad
+vendor/lib64/soundfx/libspatialaudio.so|6032bab9daed70af13ab9ebcc21a40d703d05bbe
+
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|b0f73b4ac1a88607ec90b514b9602de423bb9be6
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
