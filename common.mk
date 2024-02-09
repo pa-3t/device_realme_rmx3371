@@ -147,6 +147,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.oplus.rc \
+    init.realme.rc \
     init.oplus.sh \
     init.target.rc \
     ueventd.oplus.rc
