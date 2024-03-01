@@ -211,14 +211,11 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     AOSPAOPlusFrameworksResCommon \
-    FrameworksResTarget \
     OPlusCarrierConfigResCommon \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
-    OPlusTetheringResCommon \
-    OPlusWifiResCommon \
-    OPlusWifiResCommonMainline
+    OPlusTetheringResCommon
 
 # Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
