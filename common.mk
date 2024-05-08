@@ -311,6 +311,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp
+
+PRODUCT_PACKAGES += \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
