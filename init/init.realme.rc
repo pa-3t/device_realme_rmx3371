@@ -1,51 +1,28 @@
 on init
-   # boottime stune
+   # Boot time stune
     write /dev/stune/schedtune.prefer_idle 1
     write /dev/stune/schedtune.boost 100
-    # Boot time cpuset and stune
+   
+   # Boot time cpuset and stune
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-5
-    write /dev/cpuset/system-background/cpus 0-5
+    write /dev/cpuset/background/cpus 0-7
+    write /dev/cpuset/system-background/cpus 0-7
     write /dev/cpuset/restricted/cpus 2-5
 
-    # Boot time fs tuning
+    # Boot time fs tuning for I/O
     write /sys/block/sda/queue/iostats 0
-    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/scheduler noop  # Changed to 'noop' scheduler for flash-based storage
     write /sys/block/sda/queue/iosched/slice_idle 0
-    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sda/queue/nr_requests 512  # Increased nr_requests for better I/O performance
 
-    # Disable UFS powersaving
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 0
-    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 0
-    write /sys/devices/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled Y
-
-    # bring back all cores
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
-    write /sys/devices/system/cpu/cpu4/online 1
-    write /sys/devices/system/cpu/cpu5/online 1
-    write /sys/devices/system/cpu/cpu6/online 1
-    write /sys/devices/system/cpu/cpu7/online 1
-
-    # report max frequency to unity tasks.
+    # Report max frequency to unity tasks.
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so,com.miHoYo.,libunity.so,libfb.so,liblogic.so,libssgamesdkcronet.so,libil2cpp.so,com.activision."
     write /proc/sys/kernel/sched_lib_mask_force 255
 
+    # Set data and node I/O flags
     write /dev/sys/fs/by-name/userdata/data_io_flag 56
     write /dev/sys/fs/by-name/userdata/node_io_flag 56
-
-on boot
-  # Double Tap Sensor
-    chown system system /proc/touchpanel/i2c/double_tap_pressed
-    chmod 0660 /proc/touchpanel/i2c/double_tap_pressed
-
-    # Single Tap Sensor
-    chown system system /proc/touchpanel/i2c/single_tap_pressed
-    chmod 0660 /proc/touchpanel/i2c/single_tap_pressed
 
 # Route touch_polling_mode to persist
 on property:debug.touch_polling_mode=0
@@ -57,9 +34,6 @@ on property:debug.touch_polling_mode=1
 # Toggle glove mode.
 on property:persist.vendor.touch_polling_mode=0 && property:sys.boot_completed=1
     write /proc/touchpanel/game_switch_enable "0"
-
-on property:persist.vendor.touch_polling_mode=1 && property:sys.boot_completed=1
-    write /proc/touchpanel/game_switch_enable "1"
 
 on property:vendor.post_boot.parsed=1
     write /proc/sys/vm/page-cluster 0
