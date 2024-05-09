@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libcamera_metadata_shim \
-    libstdc++.vendor
+    libstdc++.vendor \
     libc++_shared \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
@@ -199,14 +199,9 @@ PRODUCT_PACKAGES += \
 # Media
 GENERIC_ODM_IMAGE := true
 
-# Net
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
-
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
-
 
 # Overlays
 PRODUCT_PACKAGES += \
