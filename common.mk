@@ -313,6 +313,10 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# RIL
+PRODUCT_PACKAGES += \
+    libshims_ocsclk
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
