@@ -29,8 +29,6 @@ ro.audio.spatializer_enabled=true
 ro.audio.spatializer_transaural_enabled_default=false
 persist.vendor.audio.spatializer.speaker_enabled=true
 
-# Camera
-vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram
 
 # Chipset
 ro.soc.model=SM8250
