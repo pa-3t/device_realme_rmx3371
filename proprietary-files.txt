@@ -1,13 +1,31 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from RMX3371_11_C.04.
+## from RMX3371_14_.210.EX01
 
 # ADSPRPC
 vendor/etc/init/vendor.qti.adsprpc-service.rc|20cb0e4f182f64c51c214104487ae4836f04b86e
+
+# ACDB
+odm/etc/acdbdata/Bluetooth_cal.acdb
+odm/etc/acdbdata/General_cal.acdb
+odm/etc/acdbdata/Global_cal.acdb
+odm/etc/acdbdata/Handset_cal.acdb
+odm/etc/acdbdata/Hdmi_cal.acdb
+odm/etc/acdbdata/Headset_cal.acdb
+odm/etc/acdbdata/Speaker_cal.acdb
+odm/etc/acdbdata/MOS/Bluetooth_cal.acdb
+odm/etc/acdbdata/MOS/General_cal.acdb
+odm/etc/acdbdata/MOS/Global_cal.acdb
+odm/etc/acdbdata/MOS/Handset_cal.acdb
+odm/etc/acdbdata/MOS/Hdmi_cal.acdb
+odm/etc/acdbdata/MOS/Headset_cal.acdb
+odm/etc/acdbdata/MOS/Speaker_cal.acdb
+odm/etc/acdbdata/Speaker_cal.acdb
 
 # ADSPRPC
 vendor/bin/adsprpcd
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
@@ -24,7 +42,7 @@ vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# ADSP modules -RUI
+# ADSP modules - RUI
 odm/lib/rfsa/adsp/aiboost/libaiboostsr_skel_v66.so|5f7fd1bc18738c0a75bec6c27a39abaa3f4c3104
 odm/lib/rfsa/adsp/aiboost/libaiboostubwc_skel.so|651cdf1888ef59a9250708217299cd784107fd93
 odm/lib/rfsa/adsp/libQnnHtp.so|ce4386772ea0f21772185deb5d703cf9596d57bf
@@ -95,8 +113,39 @@ vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3c
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
+# Audio firmware
+odm/firmware/tfa98xx.cnt
+
+# Audio LVIMFS Params
+odm/etc/lvimfs_params/LVACFS_Configuration.txt
+odm/etc/lvimfs_params/LVIMFS_Calibration_2mic.dat
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID1_MIC_Normal.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID2_MIC_APP1.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID3_MIC_APP2.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID4_MIC_Cam.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID5_MIC_Conference.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID6_MIC_Fast.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID7_MIC_Interview.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID8_MIC_Unprocess.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID9_MIC_Voice.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID10_MIC_VR.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID11_HE.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID12_HE_APP1.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID13_HE_APP2.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID14_HE_Cam.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID15_HE_Conference.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID16_HE_Fast.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID17_HE_Interview.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID18_HE_Unprocess.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID19_HE_Voice.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID20_HE_VR.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID21_USB_Normal.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID22_USB_APP1.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID23_BT_Normal.txt
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID24_BT_APP1.txt
+
+
 # Audio -RUI
-vendor/etc/acdbdata/adsp_avs_config.acdb|214452a53d193f189515fce96bce59697ce9ac44
 vendor/lib/hw/sound_trigger.primary.kona.so|5cf00791af03476d47633826565a3ef6a9243720
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
 vendor/lib/soundfx/libqcbassboost.so|00c29b4e50e67c5de4ad22e0284c500080b4c116
@@ -140,7 +189,7 @@ vendor/lib/libgcs.so|e5ac7c64205f4b73f8c473db8f5650fb9b3b44b9
 vendor/lib/libhdmipassthru.so|28be6f121c48474cbc6404de05811ff5393d73c9
 vendor/lib/liblistensoundmodel2.so|e9d1b76b6d279e3743488d2917870f72a7a7ddbc
 vendor/lib/libmulawdec.so|89ebb1d9e77911f1abe37405016839d8436a9825
-vendor/lib/libqtigef.so|3b16e7a1f312fd5715bd78a17472794c4ae9e362
+vendor/lib/libqtigef.so|d2e8b296db9d8ff19051858ee1a0143e06c69df3
 vendor/lib64/hw/sound_trigger.primary.kona.so|d9df16dfd3d873a39342d707512bdfc58b5b05e7
 vendor/lib64/libAlacSwDec.so|3235d624acb038d37471360efd8bcd2f6c7509a4
 vendor/lib64/libApeSwDec.so|efac4ae01cd425577c704d06704b00970d324167
@@ -162,15 +211,15 @@ vendor/lib64/libOmxWmaDec.so|9735d133cf7043a07cd17dc6a00abdff9641b9a7
 # Dolby - from 9PRO OOS 11.2.8.8
 system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec1273befed
 -system_ext/priv-app/DaxUI/DaxUI.apk|f2123124ddef928c7c490e2a83b0af5466a0df7e
--system_ext/priv-app/daxService/daxService.apk|ed1de719afc7181a7e896e0eeaf14edc00761c21
+-system_ext/priv-app/daxService/daxService.apk|0d1f71d0a58d909c05adacf5239503588b9d39ea
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|84247a3563b362e97dacaa79d4845c1292a92f13
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/lib/libdapparamstorage.so|6c488c6bc88abe13c6fd689124475526c1cf41b8
 vendor/lib/libdeccfg.so|28b3aa2368d091b50ef7d5f3c3d44466a89172f8
 vendor/lib/libqtigef.so|d2e8b296db9d8ff19051858ee1a0143e06c69df3
-vendor/lib/libstagefright_soft_ac4dec.so|e1560136d7f16ed177e8f848fba3448014ea061c
-vendor/lib/libstagefright_soft_ddpdec.so|c1a83910911cdab332088b10b2d3675b735a9524
-vendor/lib/libstagefrightdolby.so|c4269437c623630cf9c79c2010a7cfb88828584a
+vendor/lib/libstagefright_soft_ac4dec.so|d5221991029fee159e225cafcb397e5e85070c81
+vendor/lib/libstagefright_soft_ddpdec.so|9d84bc7eca710f618e0e960d664ca00e608e756b
+vendor/lib/libstagefrightdolby.so|a2a600ef92c3a032a5d6fb27fa27b01be92a4747
 vendor/lib/soundfx/libeffectproxy.so|44289fe864b085d53c051ad42ed233727ced175c
 vendor/lib/soundfx/libhwdap.so|6348b774b3df7bd2f485186f2ebc3e84d9435df8
 vendor/lib/soundfx/libswdap.so|bd73d33628837d0e3aa18d85c5ffb8e95b87af1b
@@ -178,10 +227,10 @@ vendor/lib/soundfx/libswgamedap.so|a4d17b610b5cd873bd82c28f7361ba66a5d2c48e
 vendor/lib/vendor.dolby.hardware.dms@2.0.so|73532d31c8fdad87b69e9cc1724dfc5b02a893e7
 vendor/lib64/libdapparamstorage.so|b820de455f13bce531331f9e134b1e56b8a651d4
 vendor/lib64/libdeccfg.so|adea652793ab688253b0b56d6c165625184eab54
-vendor/lib64/libdlbdsservice.so|f8867071a19efabef94eae4eb62424a5a88b9ef0
-vendor/lib64/libstagefright_soft_ac4dec.so|8c89d21ba388c05504f2950d8a7c1103e57214ad
-vendor/lib64/libstagefright_soft_ddpdec.so|555b5b366c35bad0c6d6e98a3d04f1105e4d9e92
-vendor/lib64/libstagefrightdolby.so|67157be87b3d8fe2c5a057044ce596ce1b68d16b
+vendor/lib64/libdlbdsservice.so|2e29d88024d80ed23f51f9beffc6e6698ebe6293
+vendor/lib64/libstagefright_soft_ac4dec.so|858913d67995d10dd5e0d114cdd614ee059446ef
+vendor/lib64/libstagefright_soft_ddpdec.so|ab6aabfe237df482c0ca9d78bd7ad08083b9d60d
+vendor/lib64/libstagefrightdolby.so|3f78d8a4eb9e0b5d07fe82747e08bb82d4bc0c21
 vendor/lib64/soundfx/libeffectproxy.so|e09115bb4087510eab62d21ab050274d6c98db71
 vendor/lib64/soundfx/libhwdap.so|901e19f8e271c8d228e41136ea8d611c3b3d30b4
 vendor/lib64/soundfx/libswdap.so|a468c839bd18e31d50f92d371dbd079374667068
@@ -1031,6 +1080,9 @@ vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/libdepthmapwrapper.so
 
 # Camera (configs)
+odm/etc/camera/ashdr/ncf_pack.ncf
+odm/etc/camera/darksight/darksight_main.bin
+odm/etc/camera/darksight/darksight_ultrawide.bin
 odm/etc/camera/ancsegbase/anc_cl_kernel.cache
 odm/etc/camera/ancsegbase/model.data
 odm/etc/camera/asd/class.dlc
@@ -1081,7 +1133,22 @@ odm/vendor/firmware/ois_bu63169.prog
 odm/vendor/firmware/ois_bu63169_sec.coeff
 odm/vendor/firmware/ois_bu63169_sec.prog
 odm/vendor/firmware/ois_sem1215s_19066_dvt.bin
+odm/vendor/firmware/teemodel
 vendor/firmware/CAMERA_ICP.elf
+
+# Camera sensors
+odm/lib64/camera/com.qti.sensor.hi846.so
+odm/lib64/camera/com.qti.sensor.imx471.so
+odm/lib64/camera/com.qti.sensor.ov02b.so
+odm/lib64/camera/com.qti.sensor.ov64b.so
+odm/lib64/camera/com.qti.sensormodule.qtech_ov64b.bin
+odm/lib64/camera/com.qti.sensormodule.shine_ov02b.bin
+odm/lib64/camera/com.qti.sensormodule.truly_hi846.bin
+odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin
+odm/lib64/camera/com.qti.tuned.sm8250_qtech_ov64b.bin
+odm/lib64/camera/com.qti.tuned.sm8250_shine_ov02b.bin
+odm/lib64/camera/com.qti.tuned.sm8250_truly_hi846.bin
+odm/lib64/camera/com.qti.tuned.sm8250_truly_imx471.bin
 
 # Charger
 vendor/bin/init.qti.chg_policy.sh
@@ -1344,6 +1411,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 odm/bin/hw/vendor.qti.secure_element@1.2-service
 odm/etc/init/vendor.qti.secure_element@1.2-service.rc
 odm/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/etc/init/init.embmssl_server.rc
 
 # ESE
 odm/bin/hw/vendor.qti.esepowermanager@1.1-service
@@ -1351,6 +1419,7 @@ odm/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 odm/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 odm/lib64/vendor.qti.esepowermanager@1.0.so
 odm/lib64/vendor.qti.esepowermanager@1.1.so
+
 
 # Diag
 vendor/lib/libdiag.so
@@ -1450,17 +1519,18 @@ vendor/lib64/vendor.display.postproc@1.0.so
 # DPM
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
+vendor/lib/libmdmdetect.so
+vendor/lib/liboemnvbk_img_helper.so
+vendor/lib64/liboemnvbk_img_helper.so
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
-
+vendor/lib64/libmdmdetect.so
 
 # FASTCV
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
-
-
 
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
@@ -1484,6 +1554,35 @@ odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 odm/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
 vendor/lib64/libhvx_proxy_stub.so
 vendor/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
+
+# Fingerprint firmware
+odm/vendor/firmware/ancap64.b00
+odm/vendor/firmware/ancap64.b01
+odm/vendor/firmware/ancap64.b02
+odm/vendor/firmware/ancap64.b03
+odm/vendor/firmware/ancap64.b04
+odm/vendor/firmware/ancap64.b05
+odm/vendor/firmware/ancap64.b06
+odm/vendor/firmware/ancap64.b07
+odm/vendor/firmware/ancap64.mdt
+odm/vendor/firmware/goodixfp.b00
+odm/vendor/firmware/goodixfp.b01
+odm/vendor/firmware/goodixfp.b02
+odm/vendor/firmware/goodixfp.b03
+odm/vendor/firmware/goodixfp.b04
+odm/vendor/firmware/goodixfp.b05
+odm/vendor/firmware/goodixfp.b06
+odm/vendor/firmware/goodixfp.b07
+odm/vendor/firmware/goodixfp.mdt
+vendor/firmware/image/opluseid.b00
+vendor/firmware/image/opluseid.b01
+vendor/firmware/image/opluseid.b02
+vendor/firmware/image/opluseid.b03
+vendor/firmware/image/opluseid.b04
+vendor/firmware/image/opluseid.b05
+vendor/firmware/image/opluseid.b06
+vendor/firmware/image/opluseid.b07
+vendor/firmware/image/opluseid.mdt
 
 
 # Osense - RUI
@@ -1801,7 +1900,7 @@ vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libqcbor.so
 
-# Soter - OOS
+# Soter - RUI
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|8e315a85eeeb94a51f1533c80212d2fc0ec88760
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|b1bea56084e2530a437746674fc7fc0488ca0a2c
@@ -1811,7 +1910,7 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so|8251cbf50d81918cb0ab298e4ed26d2174
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# Thermal engine - OOS
+# Thermal engine - RUI
 vendor/bin/thermal-engine|94e895563650350082c983c314460c6691e6355e
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
 vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
@@ -1824,12 +1923,12 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touchscreen firmware
-odm/firmware/tp/21623/FW_FT3658U_SAMSUNG.img
-odm/firmware/tp/21623/FW_FT3658U_SAMSUNG_FAE.img
-odm/firmware/tp/21623/LIMIT_FT3658U_SAMSUNG.img
+# Touchscreen firmware - RUI
+odm/firmware/tp/21623/FW_FT3658U_SAMSUNG.img|cea1853f2d04b849f10f589452ab56a6d37a14dd
+odm/firmware/tp/21623/FW_FT3658U_SAMSUNG_FAE.img|83bd18d436e49749dc9d1cf723fce7e0687b2c8a
+odm/firmware/tp/21623/LIMIT_FT3658U_SAMSUNG.img|15c633d9a18e4028eeb0edf399730b333dbaae8c
 
-# Vibrator firmware
+# Vibrator firmware - RUI
 odm/firmware/100ms_RTP.bin|53d01a8a09986b43ca4c3e706f54b0cef1152a6e
 odm/firmware/120ms_RTP.bin|bd7de4df7e6681b5b7cf9d5a47e49b33d696e3e8
 odm/firmware/140ms_RTP.bin|11cb202a1e862e6cac177a890db3b296858e13a4
@@ -1855,24 +1954,26 @@ odm/firmware/480ms_RTP.bin|7c3d0368a507ea5c49c486ffcc4b8ca01c34e607
 odm/firmware/500ms_RTP.bin|4cf818314c50e4a7aba3daae37fd18e0086ab582
 odm/firmware/60ms_RTP.bin|28aa230a3fd4e46e37544095faa8768a0c917acb
 odm/firmware/80ms_RTP.bin|68e58098ac6ae8ecb5c90bbfd0012a3d2ff4cfe1
-odm/firmware/aw8697_haptic.bin
-odm/firmware/aw8697_haptic_170.bin
-odm/firmware/aw8697_haptic_235.bin
-odm/firmware/awinic_haptic_params.bin
+odm/firmware/aw8697_rtp.bin|9f32c9bf0776a566d3254129a028dae9bed76b81
+odm/firmware/aw8697_haptic.bin|406a360ffd187376d0e4e408f27cf962b13985fc
+odm/firmware/aw8697_haptic_170.bin|e250daf6d322ab0c876a1e7cee3222fd398e15b7
+odm/firmware/aw8697_haptic_235.bin|82ce4c6258a229fcba6a07c3763d272d0a1d1e0d
+odm/firmware/awinic_haptic_params.bin|452c75e95a0c6b85648b07a2a390d4f6b87ab78a
 
-
-# Vibrator -RUI
-odm/bin/hw/vendor.oplus.hardware.vibrator-service
-odm/etc/aac_richtap.config
-odm/etc/init/vibrator-default.rc
-odm/etc/vintf/manifest/vibrator-default.xml
-odm/lib/hw/awinic.haptic.effect.so
-odm/lib/libaacvibrator.so
-odm/lib/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
-odm/lib64/libaacvibrator.so
-odm/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.default.so
+# Vibrator - RUI
+odm/bin/hw/vendor.oplus.hardware.vibrator-service|d48e22bccdd16611f112f924d743c4a8ef3b8351
+odm/etc/aac_richtap.config|2d85b9ae492f7899785c0c4769fee815fee1248e
+odm/etc/init/vibrator-default.rc|523b1aa68d2d2494c631ec53143db02dfe399d99
+odm/etc/vintf/manifest/vibrator-default.xml|1a42ecd34f950e3737c61247b2d1d85039643729
+odm/lib/hw/awinic.haptic.effect.so|400698764bf66a9dbd2cd34e2c7ee81a8267bbab
+odm/lib/libaacvibrator.so|8f85e391d0667ff354d3a32fd0e57c57325c2576
+odm/lib/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so|84885997c587ea369391b1c60b043f675d30b48f
+odm/lib/vendor.aac.hardware.richtap.vibrator-V2-ndk_platform.so|7a0ff607a6b540982bb44bb15ddf8e577f96d875
+odm/lib64/libaacvibrator.so|58667a52ad4a7f658c507f4ebf8d5697140111ee
+odm/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so|3645b63eeb7e5724cf8428b484aa6df34a573b45
+odm/lib64/vendor.aac.hardware.richtap.vibrator-V2-ndk_platform.so|ca2d618a0ec8d0d5688806c806ee47ffcb8b96ce
+vendor/lib/hw/vibrator.default.so|e68e9831f87fe72f10d1b1a5a4082c538a162a56
+vendor/lib64/hw/vibrator.default.so|bd8fe00bddecd50ba9137c71998e1d4c29a27e54
 
 # VPP
 vendor/etc/vintf/manifest/manifest_oplus_osiesr.xml
@@ -1905,6 +2006,7 @@ odm/lib64/libwvhidl.so|47d7bd45bee04d43e3679a552558abc848e5594c
 vendor/lib64/libtrustedapploader.so|030366cf9b29f9beacea371f1c2a8781664be851
 
 # Wifi
+odm/etc/wifi/bdwlan.elf
 odm/etc/wifi/bin_version
 odm/etc/wifi/regdb.bin
 odm/etc/wifi/regdb_version

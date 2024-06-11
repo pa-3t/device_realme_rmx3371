@@ -12,6 +12,14 @@ persist.vendor.qcom.bluetooth.soc=hastings
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
+bluetooth.device.default_name=Realme GT Neo 3T
+
+# Crypto
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
+
+# USB
+vendor.usb.product_string=Realme GT Neo 3T
 
 # Dolby
 vendor.audio.dolby.ds2.enabled=true
