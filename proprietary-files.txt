@@ -1794,7 +1794,7 @@ vendor/lib64/libcpion.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/libspl.so
-
+vendor/lib64/libsecureui.so
 
 # Sensors
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
