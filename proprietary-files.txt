@@ -113,7 +113,7 @@ vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3c
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio firmware
+# Audio firmware 
 odm/firmware/tfa98xx.cnt
 
 # Audio LVIMFS Params
@@ -144,8 +144,14 @@ odm/etc/lvimfs_params/LVIMFS_Parameter_ID22_USB_APP1.txt
 odm/etc/lvimfs_params/LVIMFS_Parameter_ID23_BT_Normal.txt
 odm/etc/lvimfs_params/LVIMFS_Parameter_ID24_BT_APP1.txt
 
-
 # Audio -RUI
+vendor/lib/liba2dpoffload.so
+vendor/lib/libssrec.so
+odm/lib/libstdc++.so
+odm/lib/libaudioEngineerTest.so
+odm/lib/liblvimfs.so
+odm/lib/liblvimfs_wrapper.so
+vendor/lib/hw/audio.primary.kona.so
 vendor/lib/hw/sound_trigger.primary.kona.so|5cf00791af03476d47633826565a3ef6a9243720
 vendor/lib/soundfx/libasphere.so|b2daeb875914a33575c7d7a67429f25d09d35489
 vendor/lib/soundfx/libqcbassboost.so|00c29b4e50e67c5de4ad22e0284c500080b4c116
@@ -1979,6 +1985,8 @@ vendor/lib64/hw/vibrator.default.so|bd8fe00bddecd50ba9137c71998e1d4c29a27e54
 vendor/etc/vintf/manifest/manifest_oplus_osiesr.xml
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
+vendor/lib/libqc2vppfilter.so
+vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so

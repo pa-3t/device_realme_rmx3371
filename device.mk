@@ -56,8 +56,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_HAS_AUDIO_LVIMFS := true
 TARGET_USES_BLUETOOTH_LE_AUDIO := true
 
-PRODUCT_PACKAGES += \
-    audio_amplifier.kona
 
 AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 
