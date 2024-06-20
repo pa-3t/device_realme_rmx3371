@@ -39,14 +39,10 @@
         </interface>
         <fqname>@1.0::IBluetoothHci/default</fqname>
      </hal>
-     <hal format="hidl">
+      <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <version>4.1</version>
-        <interface>
-            <name>IKeymasterDevice</name>
-            <instance>default</instance>
-        </interface>
+        <fqname>@4.1::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>

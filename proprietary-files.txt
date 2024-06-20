@@ -1641,16 +1641,10 @@ vendor/etc/media_codecs_performance_kona.xml|d70a578f2fb8220dcfb2b92138abe98e88f
 vendor/etc/media_codecs_performance_kona_vendor.xml|d70a578f2fb8220dcfb2b92138abe98e88fda521
 vendor/etc/media_codecs_vendor_audio.xml|fc55096c4a7d3f59b7ed3493858127fa373a9567
 
-
 # Keymaster
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
-vendor/bin/keymasterd
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
-vendor/etc/init/keymasterd.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
