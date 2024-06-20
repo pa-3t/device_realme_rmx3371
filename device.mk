@@ -241,7 +241,11 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/realme/rmx3371 \
+    device/realme/rmx3371 \
+    hardware/oplus 
+    
 
 # QTI
 TARGET_BOARD_PLATFORM := kona
