@@ -31,13 +31,6 @@ ro.vendor.product.manufacturer.db=OP_PHONE
 vendor.product.device=OP_PHONE
 vendor.product.manufacturer=OPD
 
-
-# Spatial Audio
-ro.audio.spatializer_enabled=true
-ro.audio.spatializer_transaural_enabled_default=false
-persist.vendor.audio.spatializer.speaker_enabled=true
-
-
 # Chipset
 ro.soc.model=SM8250
 
