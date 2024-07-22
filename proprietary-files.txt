@@ -1903,12 +1903,27 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so|8251cbf50d81918cb0ab298e4ed26d2174
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# Thermal engine - RUI
-vendor/bin/thermal-engine|94e895563650350082c983c314460c6691e6355e
-vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
-vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
--vendor/lib/libthermalclient.so|20114bc026d44fd2599f6ea11814c0f47608d2ff
--vendor/lib64/libthermalclient.so|5717255cb13238f094b121066acc6f7b16335508
+# Thermal
+vendor/bin/hw/android.hardware.thermal@2.0-service.qti
+vendor/etc/init/android.hardware.thermal@2.0-service.qti.rc
+-vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
+odm/lib/vendor.oplus.hardware.thermalmntcfg@1.0.so
+odm/lib64/vendor.oplus.hardware.thermalmntcfg@1.0.so
+odm/bin/hw/vendor.oplus.hardware.thermalmntcfg@1.0-service
+odm/etc/init/vendor.oplus.hardware.thermalmntcfg@1.0-service.rc
+
+# Thermal (Qualcomm)
+vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+
+# Thermal configs
+odm/etc/temperature_profile/sys_high_temp_protect_21732.xml
+odm/etc/temperature_profile/sys_thermal_control_config.xml
+odm/etc/ThermalServiceConfig/sys_thermal_config.xml
+-odm/etc/vintf/manifest/manifest_oplus_thermalmntcfg.xml
+vendor/etc/thermal-engine.conf
 
 # Time services
 vendor/app/TimeService/TimeService.apk

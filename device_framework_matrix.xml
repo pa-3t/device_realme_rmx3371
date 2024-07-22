@@ -28,6 +28,15 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.thermalmntcfg</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IThermalMntCfg</name>
+            <instance>default</instance>
+        </interface>
+      </hal>   
+    <hal format="hidl" optional="true">
         <name>android.hardware.wifi.supplicant</name>
         <version>1.0-4</version>
         <interface>

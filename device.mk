@@ -300,10 +300,6 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti
-
 # Verified boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
