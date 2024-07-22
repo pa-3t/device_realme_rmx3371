@@ -31,6 +31,7 @@ ro.vendor.product.manufacturer.db=OP_PHONE
 vendor.product.device=OP_PHONE
 vendor.product.manufacturer=OPD
 
+<<<<<<< HEAD
 
 # Spatial Audio
 ro.audio.spatializer_enabled=true
@@ -38,6 +39,8 @@ ro.audio.spatializer_transaural_enabled_default=false
 persist.vendor.audio.spatializer.speaker_enabled=true
 
 
+=======
+>>>>>>> d6f88ef (RMX3371 : Drop Spatial  props)
 # Chipset
 ro.soc.model=SM8250
 
