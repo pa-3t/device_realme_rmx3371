@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
     frameworks/native/data/etc/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml
 
 # Camera
-$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
+#$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
 
 # Camera
 PRODUCT_PACKAGES += \
